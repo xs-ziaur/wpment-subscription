@@ -1,0 +1,19 @@
+{
+    "name": "xpeed/wpmet-subscription",
+    "description": "A woocommerce subscription plugin",
+    "type": "wordpress-plugin",
+    "license": "GPLv2",
+    "authors": [
+        {
+            "name": "zrshishir",
+            "email": "zrshishir@gmail.com"
+        }
+    ],
+    "minimum-stability": "dev",
+    "require": {},
+    "autoload": {
+        "psr-4": {
+            "Xpeed\\WpmetSubscription\\": "src/"
+        }
+    }
+}
