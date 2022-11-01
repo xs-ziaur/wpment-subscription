@@ -50,9 +50,16 @@ class WpmetPostType
                 'has_archive'     => false,
                 'supports'        => false,
                 'map_meta_cap'    => true,
-                'capabilities'    => array(
-                    'create_posts' => 'do_not_allow',
-                ),
+                // 'capabilities'    => array(
+                //     'edit_post'          => 'edit_book', 
+                //     'read_post'          => 'read_book', 
+                //     'delete_post'        => 'delete_book', 
+                //     'edit_posts'         => 'edit_books', 
+                //     'edit_others_posts'  => 'edit_others_books', 
+                //     'publish_posts'      => 'publish_books',       
+                //     'read_private_posts' => 'read_private_books', 
+                //     'create_posts'       => 'edit_books', 
+                // ),
             ));
         }
 
