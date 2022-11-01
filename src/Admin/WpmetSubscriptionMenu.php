@@ -1,6 +1,6 @@
 <?php
 
-namespace Xpeed\WpmetSubscription\Admin;
+namespace Wpmet\WpmetSubscription\Admin;
 
 class WpmetSubscriptionMenu
 {
@@ -20,17 +20,17 @@ class WpmetSubscriptionMenu
             $capability,
             $parent_slug,
             [ $this, 'wpmetSubscription'],
-            'dashicons-welcome-view-site'
+            'dashicons-products'
         );
 
-        add_submenu_page(
-            $parent_slug,
-            __('Master Log', 'wpmet-subscription'),
-            __('Master Log', 'wpmet-subscription'),
-            $capability,
-            $parent_slug,
-            [$this, 'masterLog']
-        );
+        // add_submenu_page(
+        //     $parent_slug,
+        //     __('Master Log', 'wpmet-subscription'),
+        //     __('Master Log', 'wpmet-subscription'),
+        //     $capability,
+        //     $parent_slug,
+        //     [$this, 'masterLog']
+        // );
 
         add_submenu_page(
             $parent_slug,

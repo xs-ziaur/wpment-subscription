@@ -1,6 +1,6 @@
 <?php
 
-namespace Xpeed\WpmetSubscription;
+namespace Wpmet\WpmetSubscription;
 
 
 class Admin

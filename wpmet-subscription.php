@@ -17,6 +17,9 @@
  * Domain Path: /languages
  */
 
+use Wpmet\WpmetSubscription\Admin;
+use Wpmet\WpmetSubscription\Setup\Setup;
+
  if (! defined('ABSPATH' ) ) {
     die;
  }
@@ -47,6 +50,7 @@
 	public static function init() {
 		
 		static $instance = false;
+		new Setup();
 
 		if ( !$instance ) {
 			$instance = new self();
@@ -57,7 +61,7 @@
 
     public function initPlugin() {
         if (is_admin()) {
-            new Xpeed\WpmetSubscription\Admin();
+            new Admin();
         }
     }
 
@@ -67,8 +71,6 @@
 	 * @return void
 	 */
 	public function activate() {
-        
-		
 	}
 
     /**
