@@ -28,28 +28,45 @@ class WpmetPostType
     {
         if (!post_type_exists('wpmet-subscription')) {
             register_post_type('wpmet-subscription', array(
+                'label' => __('Subscription', 'wpmet-subscription'),
                 'labels'          => array(
                     'name'               => __('Subscriptions', 'wpmet-subscription'),
                     'singular_name'      => _x('Subscription', 'singular name', 'wpmet-subscription'),
                     'menu_name'          => _x('Subscriptions', 'admin menu', 'wpmet-subscription'),
+                    'name_admin_bar'     => _x('Subscriptions', 'wpmet-subscription'),
+                    'all_items'          => __('All subscriptions', 'wpmet-subscription'),
                     'add_new'            => __('Add subscription', 'wpmet-subscription'),
                     'add_new_item'       => __('Add new subscription', 'wpmet-subscription'),
                     'new_item'           => __('New subscription', 'wpmet-subscription'),
                     'edit_item'          => __('Edit subscription', 'wpmet-subscription'),
+                    'update_item'        => __('Update subscription', 'wpmet-subscription'),
                     'view_item'          => __('View subscription', 'wpmet-subscription'),
+                    'view_items'          => __('View subscriptions', 'wpmet-subscription'),
                     'search_items'       => __('Search subscriptions', 'wpmet-subscription'),
                     'not_found'          => __('No subscription found.', 'wpmet-subscription'),
                     'not_found_in_trash' => __('No subscription found in trash.', 'wpmet-subscription'),
+                    'featured_image' => __('Featured image.', 'wpmet-subscription'),
+                    'set_featured_image' => __('Set featured image.', 'wpmet-subscription'),
+                    'remove_featured_image' => __('Remove featured image.', 'wpmet-subscription'),
+                    'use_featured_image' => __('Use featured image.', 'wpmet-subscription'),
+                    'insert_into_item' => __('Inser into subscription.', 'wpmet-subscription'),
+                    'upload_into_this_item' => __('Upload to this subscription.', 'wpmet-subscription'),
+                    'items_list' => __('Subscription list.', 'wpmet-subscription'),
+                    'items_list_navigation' => __('Subscription list navigation.', 'wpmet-subscription'),
+                    'filter_item_list' => __('Filter Subscription list.', 'wpmet-subscription'),
                 ),
                 'description'     => __('This is where store subscriptions are stored.', 'wpmet-subscription'),
+                'menu_icon'       => 'dashicon-product',
+                'supports'        => ['title', 'editor', 'thumbnail', 'excerpt', 'comments', 'revisions', 'custom-fields'],
+                'taxonomies'        => [],
                 'public'          => true,
                 'show_ui'         => true,
-                'capability_type' => 'post',
                 'show_in_menu'    => 'wpmet-subscription',
+                'capability_type' => 'post',
                 'rewrite'         => false,
                 'has_archive'     => false,
-                'supports'        => false,
                 'map_meta_cap'    => true,
+                'can_export'    => true,
                 // 'capabilities'    => array(
                 //     'edit_post'          => 'edit_book', 
                 //     'read_post'          => 'read_book', 
@@ -90,9 +107,9 @@ class WpmetPostType
                 'supports'            => false,
                 'has_archive'         => false,
                 'map_meta_cap'        => true,
-                'capabilities'        => array(
-                    'create_posts' => 'do_not_allow',
-                ),
+                // 'capabilities'        => array(
+                //     'create_posts' => 'do_not_allow',
+                // ),
             ));
         }
 
@@ -113,9 +130,9 @@ class WpmetPostType
                 'has_archive'     => false,
                 'supports'        => false,
                 'map_meta_cap'    => true,
-                'capabilities'    => array(
-                    'create_posts' => 'do_not_allow',
-                ),
+                // 'capabilities'    => array(
+                //     'create_posts' => 'do_not_allow',
+                // ),
             ));
         }
     }
