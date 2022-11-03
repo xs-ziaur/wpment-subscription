@@ -2,6 +2,7 @@
 
 namespace Wpmet\WpmetSubscription\Setup;
 
+use Wpmet\WpmetSubscription\Model\WpmetProduct;
 use Wpmet\WpmetSubscription\Setup\CustomPostType\WpmetPostType;
 
 class Setup

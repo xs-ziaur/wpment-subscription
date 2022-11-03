@@ -18,6 +18,7 @@
  */
 
 use Wpmet\WpmetSubscription\Admin;
+use Wpmet\WpmetSubscription\Frontend\Frontend;
 use Wpmet\WpmetSubscription\Setup\Setup;
 
  if (! defined('ABSPATH' ) ) {
@@ -62,6 +63,7 @@ use Wpmet\WpmetSubscription\Setup\Setup;
     public function initPlugin() {
         if (is_admin()) {
             new Admin();
+			new Frontend();
         }
     }
 
